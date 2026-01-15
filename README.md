@@ -1,13 +1,14 @@
-![](https://img.shields.io/badge/Ritobroto-blueviolet)
+![](https://img.shields.io/badge/Ritobroto-Mukherjee-blueviolet?labelColor=green)
 
-# Practice JavaScript ES-6+
+# Practice React with projects
 
-> Learn ES-6+
+> Learn React 18+
 
 
 ## Built With
 
 - JavaScript
+- React
 - HTML- 5
 - CSS3
 
