@@ -1,33 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect, useCallback } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [color, setColor] = useState("bg-white");
+  const [textColor, setTextColor] = useState("text-gray-800");
+
+  const changeColor = useCallback((newColor) => {
+    setColor(`bg-${newColor}-500`);
+  }, [color]);
+
+  useEffect(() => {
+    const colorMap = {
+      "bg-red-500": "text-blue-600",
+      "bg-blue-500": "text-red-600",
+      "bg-green-500": "text-yellow-600",
+      "bg-yellow-500": "text-green-600",
+    };
+
+    setTextColor(colorMap[color] ? colorMap[color] : "text-gray-800");
+  }, [color]);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className={`w-screen h-screen ${color}`}>
+        <div className={`flex flex-wrap justify-center items-center h-full`}>
+          <button className={`${color} ${textColor} rounded-md shadow-md outline px-4 py-2 mx-2`} onClick={() => changeColor("red")}>Red</button>
+          <button className={`${color} ${textColor} rounded-md shadow-md outline px-4 py-2 mx-2`} onClick={() => changeColor("blue")}>Blue</button>
+          <button className={`${color} ${textColor} rounded-md shadow-md outline px-4 py-2 mx-2`} onClick={() => changeColor("green")}>Green</button>
+          <button className={`${color} ${textColor} rounded-md shadow-md outline px-4 py-2 mx-2`} onClick={() => changeColor("yellow")}>Yellow</button>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
