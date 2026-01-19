@@ -9,8 +9,9 @@
 
 - JavaScript
 - React
-- HTML- 5
+- HTML5
 - CSS3
+- Tailwind CSS
 
 ## Author
 
