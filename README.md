@@ -2,12 +2,13 @@
 
 # Practice React with projects
 
-> Learn React 18+
+> Learn React 18+ with JavaScript and TypeScript
 
 
 ## Built With
 
 - JavaScript
+- TypeScript ( On some projects - explained in those README.md )
 - React
 - HTML5
 - CSS3
