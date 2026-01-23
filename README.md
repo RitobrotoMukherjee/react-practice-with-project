@@ -10,6 +10,7 @@
 - JavaScript
 - TypeScript ( On some projects - explained in those README.md )
 - React
+- React Router DOM
 - HTML5
 - CSS3
 - Tailwind CSS
