@@ -1,4 +1,8 @@
-# React + TypeScript + Vite
+# Project
+
+> This is a basic React Project with the TypeScript and Vite to practice context-api. Used Context API for global and local state management
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
